@@ -1,5 +1,6 @@
-import { DashboardPreview } from "@/features/dashboard/components/dashboard-preview";
+import type { Route } from "next";
+import { redirect } from "next/navigation";
 
 export default function HomePage() {
-  return <DashboardPreview />;
+  redirect("/dashboard" as Route);
 }

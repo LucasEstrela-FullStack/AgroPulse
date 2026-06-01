@@ -4,7 +4,7 @@ type MapContainerProps = Readonly<{
 
 export function MapContainer({ children }: MapContainerProps) {
   return (
-    <section className="min-h-[32rem] rounded-lg border border-white/10 bg-slate-950/80">
+    <section className="relative min-h-[38rem] overflow-hidden rounded-lg border border-white/10 bg-slate-950/80 shadow-xl shadow-black/20">
       {children}
     </section>
   );

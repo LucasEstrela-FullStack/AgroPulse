@@ -1,10 +1,14 @@
 import { Check } from "lucide-react";
-import { mapLayers } from "@/mocks/maps";
+import type { MapLayer } from "@/types/maps";
 
-export function LayerSelector() {
+type LayerSelectorProps = Readonly<{
+  layers: MapLayer[];
+}>;
+
+export function LayerSelector({ layers }: LayerSelectorProps) {
   return (
     <div className="space-y-3">
-      {mapLayers.map((layer) => (
+      {layers.map((layer) => (
         <button
           className="flex w-full items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-3 py-3 text-left text-sm text-slate-200 transition hover:bg-white/[0.06]"
           key={layer.id}

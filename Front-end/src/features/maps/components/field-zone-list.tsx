@@ -1,6 +1,10 @@
-import { fieldZones } from "@/mocks/maps";
+import type { FieldZone } from "@/types/maps";
 
-export function FieldZoneList() {
+type FieldZoneListProps = Readonly<{
+  fieldZones: FieldZone[];
+}>;
+
+export function FieldZoneList({ fieldZones }: FieldZoneListProps) {
   return (
     <section className="rounded-lg border border-white/10 bg-slate-950/70 p-5">
       <h2 className="text-lg font-semibold">Field zones</h2>

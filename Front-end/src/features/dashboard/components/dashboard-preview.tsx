@@ -1,16 +1,37 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import { Activity, Droplets, Leaf, Radar } from "lucide-react";
 import { APP_NAME, APP_SLOGAN } from "@/constants/app";
 import { PageHeader } from "@/components/layout/page-header";
 import { dashboardKpis } from "@/mocks/dashboard";
 import { KpiCard } from "@/features/dashboard/components/kpi-card";
 import { ChartPanel } from "@/features/dashboard/components/chart-panel";
-import { ProductivityChart } from "@/features/dashboard/components/productivity-chart";
-import { IrrigationChart } from "@/features/dashboard/components/irrigation-chart";
 import { AlertList } from "@/features/dashboard/components/alert-list";
 import { RecommendationList } from "@/features/dashboard/components/recommendation-list";
 import { ActivityTimeline } from "@/features/dashboard/components/activity-timeline";
 
 const icons = [Leaf, Droplets, Radar, Activity];
+const ProductivityChart = dynamic(
+  () =>
+    import("@/features/dashboard/components/productivity-chart").then(
+      (module) => module.ProductivityChart
+    ),
+  {
+    ssr: false,
+    loading: () => <div className="h-full rounded-lg bg-white/[0.03]" />
+  }
+);
+const IrrigationChart = dynamic(
+  () =>
+    import("@/features/dashboard/components/irrigation-chart").then(
+      (module) => module.IrrigationChart
+    ),
+  {
+    ssr: false,
+    loading: () => <div className="h-full rounded-lg bg-white/[0.03]" />
+  }
+);
 
 export function DashboardPreview() {
   return (

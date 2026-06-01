@@ -1,5 +1,5 @@
-import { mapMetrics } from "@/mocks/maps";
 import { cn } from "@/lib/utils";
+import type { MapMetric } from "@/types/maps";
 
 const toneStyles = {
   emerald: "border-emerald-400/20 bg-emerald-400/10 text-emerald-300",
@@ -8,10 +8,14 @@ const toneStyles = {
   amber: "border-amber-400/20 bg-amber-400/10 text-amber-300"
 } as const;
 
-export function MapMetrics() {
+type MapMetricsProps = Readonly<{
+  metrics: MapMetric[];
+}>;
+
+export function MapMetrics({ metrics }: MapMetricsProps) {
   return (
     <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-      {mapMetrics.map((metric) => (
+      {metrics.map((metric) => (
         <article className={cn("rounded-lg border p-4", toneStyles[metric.tone])} key={metric.label}>
           <span className="text-sm text-slate-300">{metric.label}</span>
           <strong className="mt-2 block text-2xl text-white">{metric.value}</strong>

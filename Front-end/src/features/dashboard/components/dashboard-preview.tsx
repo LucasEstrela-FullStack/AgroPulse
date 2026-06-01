@@ -4,12 +4,12 @@ import dynamic from "next/dynamic";
 import { Activity, Droplets, Leaf, Radar } from "lucide-react";
 import { APP_NAME, APP_SLOGAN } from "@/constants/app";
 import { PageHeader } from "@/components/layout/page-header";
-import { dashboardKpis } from "@/mocks/dashboard";
 import { KpiCard } from "@/features/dashboard/components/kpi-card";
 import { ChartPanel } from "@/features/dashboard/components/chart-panel";
 import { AlertList } from "@/features/dashboard/components/alert-list";
 import { RecommendationList } from "@/features/dashboard/components/recommendation-list";
 import { ActivityTimeline } from "@/features/dashboard/components/activity-timeline";
+import { useDashboardData } from "@/features/dashboard/hooks/use-dashboard-data";
 
 const icons = [Leaf, Droplets, Radar, Activity];
 const ProductivityChart = dynamic(
@@ -34,6 +34,21 @@ const IrrigationChart = dynamic(
 );
 
 export function DashboardPreview() {
+  const { data, isLoading } = useDashboardData();
+
+  if (isLoading || !data) {
+    return (
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 text-slate-100">
+        <PageHeader
+          eyebrow={APP_SLOGAN}
+          title={APP_NAME}
+          description="Satellite, climate, and geospatial intelligence for high-scale agricultural operations."
+        />
+        <div className="h-96 rounded-lg border border-white/10 bg-slate-950/70" />
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 text-slate-100">
       <PageHeader
@@ -43,7 +58,7 @@ export function DashboardPreview() {
       />
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        {dashboardKpis.map((kpi, index) => {
+        {data.kpis.map((kpi, index) => {
           const Icon = icons[index] ?? Activity;
 
           return (
@@ -65,21 +80,21 @@ export function DashboardPreview() {
           title="Productivity trend"
           description="Monthly productivity movement compared against vegetation health signals."
         >
-          <ProductivityChart />
+          <ProductivityChart data={data.productivityTrend} />
         </ChartPanel>
 
         <ChartPanel
           title="Irrigation efficiency"
           description="Operational efficiency and irrigation priority across monitored zones."
         >
-          <IrrigationChart />
+          <IrrigationChart data={data.irrigationEfficiency} />
         </ChartPanel>
       </section>
 
       <section className="grid gap-4 xl:grid-cols-[1fr_1fr_0.8fr]">
-        <RecommendationList />
-        <AlertList />
-        <ActivityTimeline />
+        <RecommendationList recommendations={data.recommendations} />
+        <AlertList alerts={data.alerts} />
+        <ActivityTimeline activity={data.activity} />
       </section>
     </div>
   );

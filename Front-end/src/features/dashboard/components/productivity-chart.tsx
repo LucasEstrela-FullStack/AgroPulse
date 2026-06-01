@@ -9,12 +9,16 @@ import {
   XAxis,
   YAxis
 } from "recharts";
-import { productivityTrend } from "@/mocks/dashboard";
+import type { ProductivityTrendPoint } from "@/types/dashboard";
 
-export function ProductivityChart() {
+type ProductivityChartProps = Readonly<{
+  data: ProductivityTrendPoint[];
+}>;
+
+export function ProductivityChart({ data }: ProductivityChartProps) {
   return (
     <ResponsiveContainer height="100%" width="100%">
-      <AreaChart data={productivityTrend} margin={{ left: -20, right: 12, top: 12 }}>
+      <AreaChart data={data} margin={{ left: -20, right: 12, top: 12 }}>
         <defs>
           <linearGradient id="productivityFill" x1="0" x2="0" y1="0" y2="1">
             <stop offset="5%" stopColor="#22c55e" stopOpacity={0.45} />

@@ -9,12 +9,16 @@ import {
   XAxis,
   YAxis
 } from "recharts";
-import { irrigationEfficiency } from "@/mocks/dashboard";
+import type { IrrigationEfficiencyPoint } from "@/types/dashboard";
 
-export function IrrigationChart() {
+type IrrigationChartProps = Readonly<{
+  data: IrrigationEfficiencyPoint[];
+}>;
+
+export function IrrigationChart({ data }: IrrigationChartProps) {
   return (
     <ResponsiveContainer height="100%" width="100%">
-      <BarChart data={irrigationEfficiency} margin={{ left: -20, right: 12, top: 12 }}>
+      <BarChart data={data} margin={{ left: -20, right: 12, top: 12 }}>
         <CartesianGrid stroke="rgba(148, 163, 184, 0.16)" vertical={false} />
         <XAxis dataKey="zone" stroke="#94a3b8" tickLine={false} />
         <YAxis stroke="#94a3b8" tickLine={false} />

@@ -1,7 +1,11 @@
 import { AlertTriangle } from "lucide-react";
-import { recentAlerts } from "@/mocks/dashboard";
+import type { DashboardAlert } from "@/types/dashboard";
 
-export function AlertList() {
+type AlertListProps = Readonly<{
+  alerts: DashboardAlert[];
+}>;
+
+export function AlertList({ alerts }: AlertListProps) {
   return (
     <section className="rounded-lg border border-white/10 bg-slate-950/70 p-5">
       <div className="mb-5 flex items-center justify-between">
@@ -9,7 +13,7 @@ export function AlertList() {
         <AlertTriangle className="h-5 w-5 text-amber-300" aria-hidden="true" />
       </div>
       <div className="space-y-3">
-        {recentAlerts.map((alert) => (
+        {alerts.map((alert) => (
           <article className="rounded-lg border border-white/10 bg-white/[0.03] p-4" key={alert.title}>
             <div className="flex items-start justify-between gap-4">
               <div>

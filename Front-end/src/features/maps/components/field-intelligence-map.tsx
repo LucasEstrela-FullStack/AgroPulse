@@ -1,7 +1,11 @@
 import { Satellite } from "lucide-react";
-import { fieldZones } from "@/mocks/maps";
+import type { FieldZone } from "@/types/maps";
 
-export function FieldIntelligenceMap() {
+type FieldIntelligenceMapProps = Readonly<{
+  fieldZones: FieldZone[];
+}>;
+
+export function FieldIntelligenceMap({ fieldZones }: FieldIntelligenceMapProps) {
   return (
     <div className="absolute inset-0">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />

@@ -166,7 +166,7 @@ Consulta diretamente a API real do CAR sem cache e sem processamento.
 
 #### `GET /farms/{car_code}`
 
-Fluxo completo:
+Fluxo:
 
 ```
 Request → Cache → Provider → Adapter → Model → Response

@@ -1,0 +1,14 @@
+services:
+  agropulse-frontend:
+    build:
+      context: ..
+      dockerfile: Devops/Dockerfile
+    container_name: agropulse-frontend
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: "3000"
+      HOSTNAME: "0.0.0.0"
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

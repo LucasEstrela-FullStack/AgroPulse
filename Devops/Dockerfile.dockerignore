@@ -1,0 +1,12 @@
+.git
+Front-end/.next
+Front-end/node_modules
+Front-end/coverage
+Front-end/playwright-report
+Front-end/test-results
+Front-end/*.tsbuildinfo
+Front-end/.env
+Front-end/.env.local
+Front-end/.env.*.local
+Prototyping
+UML

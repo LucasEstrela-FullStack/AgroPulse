@@ -1,0 +1,35 @@
+name: Docker Image
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build frontend Docker image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Dockerfile path
+        run: test -f Devops/Dockerfile
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Devops/Dockerfile
+          push: false
+          tags: agropulse-frontend:${{ github.sha }}

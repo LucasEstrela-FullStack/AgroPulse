@@ -1,11 +1,9 @@
 # AgroPulse — Documentação Técnica Estruturada
-
 O AgroPulse é uma plataforma de inteligência agrícola voltada para segurança alimentar e otimização de grandes produtores rurais, construída para o CopernicusLAC. O sistema processa dados de Observação da Terra (Sentinel) cruzados com Inteligência Artificial para gerar insights operacionais em tempo real.
 
 ---
 
 ## 1. Visão Técnica e Arquitetural 
-
 
 
 ---

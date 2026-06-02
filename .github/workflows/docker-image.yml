@@ -1,18 +1,35 @@
-name: Docker Image CI
+name: Docker Image
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+      - develop
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
-
   build:
-
+    name: Build frontend Docker image
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify Dockerfile path
+        run: test -f Devops/Dockerfile
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Devops/Dockerfile
+          push: false
+          tags: agropulse-frontend:${{ github.sha }}

@@ -1,10 +1,10 @@
-FROM node:26-bookworm-slim AS deps
+FROM node:26-trixie-slim AS deps
 WORKDIR /app/Front-end
 
 COPY Front-end/package.json Front-end/package-lock.json ./
 RUN npm ci
 
-FROM node:26-bookworm-slim AS builder
+FROM node:26-trixie-slim AS builder
 WORKDIR /app/Front-end
 
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -13,7 +13,7 @@ COPY --from=deps /app/Front-end/node_modules ./node_modules
 COPY Front-end ./
 RUN npm run build
 
-FROM node:26-bookworm-slim AS runner
+FROM node:26-trixie-slim AS runner
 WORKDIR /app/Front-end
 
 ENV NODE_ENV=production

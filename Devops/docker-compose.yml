@@ -1,4 +1,5 @@
 services:
+
   agropulse-frontend:
     build:
       context: ..
@@ -8,7 +9,23 @@ services:
       NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
       PORT: "3000"
-      HOSTNAME: "0.0.0.0"
+      HOST: "0.0.0.0"
     ports:
       - "3000:3000"
+    depends_on:
+      - agropulse-backend
+    restart: unless-stopped
+
+
+  agropulse-backend:
+    build:
+      context: ..
+      dockerfile: Back-end/docker/Dockerfile
+    container_name: agropulse-backend
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+      CAR_USE_MOCK: "true"
+    ports:
+      - "8000:8000"
     restart: unless-stopped

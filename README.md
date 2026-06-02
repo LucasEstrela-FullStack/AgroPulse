@@ -1,127 +1,250 @@
-# AgroPulse — Inteligência Agrícola Inteligente para Grandes Produtores
+# 🌱 AgroPulse — Smart Agricultural Intelligence for Large-Scale Producers
 
-## 🌎 Visão Geral
+<p align="center">
+  <strong>From Orbit to Productivity.</strong>
+</p>
 
-O AgroPulse é uma iniciativa brasileira de inovação criada para o 3º CopernicusLAC Panamá Hackathon — Segurança Alimentar. Nosso objetivo é melhorar a produtividade agrícola em larga escala utilizando Inteligência Artificial, dados de Observação da Terra e análise geoespacial preditiva.
-
-Utilizando dados dos satélites Copernicus Sentinel, o AgroPulse ajuda produtores rurais a monitorarem grandes áreas agrícolas, otimizar recursos, prever riscos climáticos e tomar decisões mais rápidas, inteligentes e sustentáveis.
-
----
-
-# 🚨 O Problema
-
-Grandes operações agrícolas enfrentam desafios cada vez maiores causados por:
-
-* Variabilidade climática;
-* Ondas de calor e seca;
-* Aumento dos custos operacionais;
-* Estresse hídrico;
-* Condições imprevisíveis de cultivo;
-* Distribuição ineficiente de recursos.
-
-Mesmo pequenas ineficiências em milhares de hectares podem gerar enormes impactos financeiros e ambientais.
-
-Muitos produtores ainda não possuem ferramentas inteligentes capazes de transformar dados de satélite em decisões operacionais práticas em tempo real.
+<p align="center">
+  🚀 CopernicusLAC Panama Hackathon 2026 • 🛰️ Earth Observation • 🤖 Artificial Intelligence • 🌾 Food Security
+</p>
 
 ---
 
-# 💡 Nossa Solução
+## 🌎 Overview
 
-O AgroPulse transforma dados complexos de satélites em inteligência agrícola acionável.
+AgroPulse is an intelligent agricultural decision-support platform developed by a Brazilian multidisciplinary team for the **3rd CopernicusLAC Panama Hackathon – Food Security Edition**.
 
-A plataforma combina:
+Our mission is to transform Earth Observation data into actionable agricultural intelligence, helping large-scale producers optimize productivity, reduce operational waste, and strengthen climate resilience across thousands of hectares.
 
-* Dados de umidade do solo e radar do Sentinel-1;
-* Monitoramento de vegetação e uso do solo do Sentinel-2;
-* Análise de temperatura da superfície terrestre do Sentinel-3;
-* Inteligência Artificial e Machine Learning;
-* Análises geoespaciais preditivas.
-
-Isso permite identificar zonas críticas, monitorar a saúde das lavouras, priorizar irrigação e otimizar operações agrícolas em tempo real.
+By combining **Copernicus Sentinel satellite data**, **Artificial Intelligence**, **predictive analytics**, and **geospatial technologies**, AgroPulse enables agricultural producers to make faster, smarter, and more sustainable decisions.
 
 ---
 
-# ⚙️ Principais Funcionalidades
+## 🚨 The Challenge
 
-## 📍 Mapas Inteligentes de Produtividade
+Large agricultural operations face increasing challenges caused by:
 
-Mapas de calor interativos identificam áreas com baixo rendimento para priorização de inspeções, drones e maquinário.
+- Climate variability;
+- Heat waves and droughts;
+- Rising operational costs;
+- Water stress;
+- Unpredictable growing conditions;
+- Inefficient resource allocation.
 
-## 💧 Priorização Dinâmica de Irrigação
+Even small inefficiencies can generate significant financial and environmental impacts when operating across thousands of hectares.
 
-O sistema cruza temperatura da superfície com indicadores de umidade do solo para recomendar quais setores devem receber irrigação primeiro após eventos extremos de calor.
-
-## 📈 Zonas Preditivas de Desempenho
-
-Análise de séries temporais históricas para identificar regiões agrícolas de alta e baixa produtividade, auxiliando decisões estratégicas de longo prazo.
-
-## 🖥️ Dashboard Operacional Inteligente
-
-Painel interativo com:
-
-* Alertas em tempo real;
-* Indicadores de produtividade;
-* Análise climática;
-* Insights geoespaciais;
-* Recomendações operacionais.
-
-## 🌦️ Monitoramento de Riscos Climáticos
-
-Detecção antecipada de anomalias ambientais, seca e estresse térmico antes que a produtividade seja impactada.
+Many producers still lack intelligent tools capable of transforming satellite observations into practical operational decisions.
 
 ---
 
-# 🛰️ Tecnologias Utilizadas
+## 💡 Our Solution
 
-* Copernicus Sentinel Data
-* Inteligência Artificial
-* Machine Learning
-* Geoprocessamento
-* Sensoriamento Remoto
-* Modelagem Preditiva
-* Cloud & DevOps
-* Visualização de Dados
-* Desenvolvimento Full Stack
+AgroPulse transforms complex satellite information into actionable agricultural intelligence.
 
----
+The platform combines data from multiple Copernicus Sentinel missions:
 
-# 🎯 Impacto Esperado
+### 🛰️ Sentinel-1
+Radar-based monitoring and soil moisture analysis.
 
-O AgroPulse busca:
+### 🌾 Sentinel-2
+Vegetation monitoring, NDVI analysis, and crop health assessment.
 
-* Aumentar a produtividade agrícola;
-* Reduzir desperdícios operacionais;
-* Melhorar a eficiência da irrigação;
-* Otimizar recursos naturais;
-* Fortalecer a resiliência climática;
-* Promover agricultura sustentável;
-* Apoiar a segurança alimentar na América Latina e Caribe.
+### 🌡️ Sentinel-3
+Land Surface Temperature (LST) monitoring and climate risk analysis.
+
+Through Artificial Intelligence and predictive geospatial analytics, AgroPulse converts these datasets into operational recommendations and real-time insights.
 
 ---
 
-# 👨‍💻 Equipe
+## ⚙️ Key Features
 
-Somos uma equipe brasileira multidisciplinar apaixonada por tecnologia, inovação, agricultura e soluções escaláveis.
+### 📍 Smart Productivity Heatmaps
 
-Nossa equipe reúne conhecimentos em:
+Interactive heatmaps identify underperforming agricultural zones, enabling better allocation of machinery, inspections, and field operations.
 
-* Desenvolvimento Full Stack;
-* Inteligência Artificial;
-* Automação;
-* DevOps & Cloud;
-* Qualidade de Software;
-* Análise de Dados;
-* Tecnologias Geoespaciais;
-* UX/UI e Prototipação.
+### 💧 Dynamic Irrigation Prioritization
+
+Combines soil moisture and temperature indicators to recommend irrigation priorities after heatwaves and extreme climate events.
+
+### 📈 Predictive Productivity Zones
+
+Analyzes multi-year satellite patterns to identify recurring high- and low-performance regions, supporting long-term planning and resource optimization.
+
+### 🌦️ Climate Risk Monitoring
+
+Detects drought risks, thermal stress, and environmental anomalies before productivity is significantly impacted.
+
+### 🖥️ Operational Intelligence Dashboard
+
+A centralized dashboard providing:
+
+- Productivity indicators
+- Climate monitoring
+- Geospatial analytics
+- Operational alerts
+- Irrigation recommendations
+- Resource optimization insights
 
 ---
 
-# 🚀 Visão
+## 🏗️ Architecture
 
-Transformar dados espaciais em decisões agrícolas mais inteligentes, sustentáveis e acessíveis.
+AgroPulse follows a modern and scalable architecture designed for future growth.
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn/UI
+- Zustand
+- TanStack Query
+- Mapbox
+
+### DevOps
+
+- Docker
+- GitHub Actions
+- CI/CD Pipelines
+- Automated Deployments
+- Containerized Environments
+
+### Future Backend
+
+- REST APIs
+- AI Services
+- Geospatial Processing
+- Climate Intelligence Engine
+- Agricultural Analytics Engine
 
 ---
 
-# 🌱 Slogan
+## 🛰️ Earth Observation Data Sources
 
-“Da órbita para a produtividade.”
+AgroPulse leverages official Copernicus datasets:
+
+- Sentinel-1
+- Sentinel-2
+- Sentinel-3
+
+These datasets enable:
+
+- Soil moisture analysis
+- Vegetation monitoring
+- NDVI calculations
+- Surface temperature analysis
+- Agricultural productivity assessment
+- Climate risk detection
+
+---
+
+## 🤖 Technologies Used
+
+### Earth Observation
+
+- Copernicus Sentinel Data
+- Remote Sensing
+- Geospatial Analytics
+
+### Artificial Intelligence
+
+- Machine Learning
+- Predictive Modeling
+- Agricultural Intelligence
+
+### Software Engineering
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Mapbox
+- Docker
+- GitHub Actions
+
+### Product & Design
+
+- UX/UI Design
+- Prototyping
+- Data Visualization
+
+---
+
+## 🎯 Expected Impact
+
+AgroPulse aims to:
+
+✅ Increase agricultural productivity
+
+✅ Reduce operational waste
+
+✅ Improve irrigation efficiency
+
+✅ Optimize resource allocation
+
+✅ Strengthen climate resilience
+
+✅ Support sustainable farming practices
+
+✅ Enhance food security across Latin America and the Caribbean
+
+---
+
+## 👨‍💻 Team
+
+We are a Brazilian multidisciplinary team passionate about technology, innovation, agriculture, and scalable solutions.
+
+Our expertise includes:
+
+- Full Stack Development
+- Artificial Intelligence
+- DevOps & Cloud
+- Software Quality
+- Data Analysis
+- Geospatial Technologies
+- UX/UI Design
+- Product Development
+
+Together, we are building a platform capable of transforming satellite observations into practical, scalable, and high-impact agricultural solutions.
+
+---
+
+## 📂 Repository Structure
+
+```bash
+AgroPulse/
+├── Front-end/
+├── Devops/
+├── UML/
+├── Prototyping/
+├── assets/
+├── dashboards/
+├── maps/
+├── experiments/
+└── documentation/
+```
+
+---
+
+## 🚀 Vision
+
+Transform Earth Observation data into smarter agricultural decisions that improve productivity, sustainability, and food security worldwide.
+
+---
+
+## 🌱 Slogan
+
+### **From Orbit to Productivity.**
+
+---
+
+## 🏆 CopernicusLAC Panama Hackathon 2026
+
+Developed for the **3rd CopernicusLAC Panama Hackathon — Food Security Edition**, an initiative promoted by the **European Union**, the **European Space Agency (ESA)**, and the **CopernicusLAC Center** to foster innovation through Earth Observation technologies across Latin America and the Caribbean.
+
+---
+
+<p align="center">
+  🛰️ Earth Observation • 🤖 Artificial Intelligence • 🌾 Smart Agriculture • 🚀 Food Security
+</p>
